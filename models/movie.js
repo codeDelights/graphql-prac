@@ -11,11 +11,11 @@ const movieSchema = new Schema({
         type: String,
         required: true
     },
-    ratings: {
+    rating: {
         type: Number,
         required: true
     }
 }, { timestamps: true });
 
-const Movies = mongoose.model('Movie', movieSchema);
-module.exports = {Movies, movieSchema};
+module.exports = mongoose.model('Movie', movieSchema);
+// module.exports = {Movies, movieSchema};

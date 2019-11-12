@@ -11,10 +11,8 @@ connect.then((db) => {
 }, (err) => {
       console.log(err);
 });
-const server = new ApolloServer({
-      typeDefs: schema.typeDefs,
-      resolvers: schema.resolvers
-});
+const server = new ApolloServer(schema);
+
 const app = express();
 app.use(bodyParser.json());
 app.use('*', cors());
